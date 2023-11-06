@@ -1,0 +1,11 @@
+
+actor Customer
+participant "Proprietary Channel\n(MyMTN APP&WEB)" as APP
+participant MADAPI
+participant "DAAS(EVA)" as DAAS
+
+Customer->APP: Clicks on the Transaction History menu to \n view for transactions within specific period
+APP->MADAPI: Requests customer tranasction History 
+MADAPI->DAAS: Requests for all transactions via NPG made within specific period.
+DAAS->MADAPI: Returns all transactions made via NPG 
+MADAPI->APP: Responds with transaction History with appropriate status\nincluding status\n**PENDING**\n**SUCCESSFUL_BUT_UNFULLFILLED**\n**FAILED**\n**SUCCESSFUL_AND_FULLFILLED** 

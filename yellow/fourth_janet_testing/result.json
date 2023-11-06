@@ -1,0 +1,76 @@
+{
+    "txn": {
+        "id": null,
+        "td": "PUSH",
+        "ts": [
+            2023,
+            10,
+            7,
+            14,
+            31,
+            20
+        ],
+        "ref": null,
+        "note": "MOB2/UTO/To USDM TEST/test",
+        "rules": null,
+        "txnType": "NIPS_DISB",
+        "externalId": "000004230123133119173408902701",
+        "riskScores": null,
+        "countryCode": "NG"
+    },
+    "meta": {
+        "channel": "nips",
+        "nipSessionId": "000004230123133119173408901500"
+    },
+    "payee": {
+        "seq": 1,
+        "code": "smartcashaccount",
+        "info": null,
+        "name": null,
+        "type": "INDIVIDUAL",
+        "device": null,
+        "rating": null,
+        "account": {
+            "details": {
+                "msisdn": "8022224166",
+                "accountNo": "0000000237",
+                "branchCode": "000"
+            },
+            "addrType": "BANKACCOUNT"
+        },
+        "txnAmount": null,
+        "payAddress": null,
+        "countryCode": "NG",
+        "credentials": [],
+        "payAddrType": null,
+        "customerParams": {}
+    },
+    "payer": {
+        "seq": 1,
+        "code": "nips-disb",
+        "info": null,
+        "name": "nips-disb",
+        "type": "PARTNER",
+        "device": null,
+        "rating": null,
+        "account": null,
+        "txnAmount": {
+            "total": 50.59,
+            "currency": "NGN"
+        },
+        "payAddress": "nips-disb",
+        "countryCode": "NG",
+        "credentials": [],
+        "payAddrType": "ALIAS",
+        "customerParams": {
+            "bvn": "22142000753",
+            "kycLevel": "",
+            "accountNo": "0000000237",
+            "accountName": "OLABISI DOYINMOLA OLAGUNDOYE",
+            "txnLocation": "",
+            "paymentRefNo": "000004230123133119173408901500"
+        }
+    },
+    "txnAmount": 50.59,
+    "orderDetails": {}
+}

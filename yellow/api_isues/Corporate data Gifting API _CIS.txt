@@ -1,0 +1,71 @@
+Corporate data Gifting API (CIS)
+
+Endpoint: 
+----------------------------------
+
+https://10.200.216.23:8443/cisBusiness/service/fulfillmentService?username=****=&password=****=&iname=SMARTWEB&msisdn=2349132058977&clientTransactionId=1644418674359661&paysrc=scapv2&input=RACT_NG_Data_661&autoRenewal=false
+
+
+Response
+------------------------------------
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<fulfillmentService>
+    <responseCode>0</responseCode>
+    <status>SUCCESS</status>
+    <systemType>CIS</systemType>
+    <responseDescription>Success.</responseDescription>
+    <requestId>WEB_10.42.5.66_c7ea9db6-dcdd-4785-b7b0-97468be7d957</requestId>
+    <responseData>
+        <responseType>PRODUCT</responseType>
+        <action>PRODUCT_BUY</action>
+        <inputCode>RACT_NG_Data_661</inputCode>
+        <circleCode>NG</circleCode>
+        <productBuy>
+            <productId>661</productId>
+            <productName>Corporate Data Gifting 100GB</productName>
+            <productType>Data</productType>
+            <amtCharged>29000</amtCharged>
+            <notification>Dear Customer, Your Corporate Data Gifting 100GB was successfully activated. You have been charged N29000 and your expiry date is 27/09/2023 12:18:32. Please dial *460*261# to check your balance. Thank you.</notification>
+        </productBuy>
+    </responseData>
+</fulfillmentService>
+
+
+
+
+
+CORPORATE DATA GIFTING ( DATA SHARE)
+
+Endpoint URL: 
+---------------------------
+
+https://10.200.216.23:8443/cisBusiness/service/fulfillmentService?username=****=&password=****=&msisdn=2349132058977&clientTransactionId=1667986003189&input=ME2U_NG_Data2Share_804&iname=SMARTWEB&transfer=1024&benmsisdn=09062058457&senderId=GenU 9JA
+
+
+Response
+----------------
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<fulfillmentService>
+    <responseCode>0</responseCode>
+    <status>SUCCESS</status>
+    <systemType>CIS</systemType>
+    <responseDescription>Success.</responseDescription>
+    <requestId>WEB_10.42.5.66_9a7dc0ba-fd67-41ca-9030-487792a94e35</requestId>
+    <responseData>
+        <responseType>PRODUCT</responseType>
+        <action>PRODUCT_BUY</action>
+        <inputCode>ME2U_NG_Data2Share_804</inputCode>
+        <circleCode>NG</circleCode>
+        <productBuy>
+            <productId>804</productId>
+            <productName>Corporate_Data_Gifting</productName>
+            <productType>Data2Share</productType>
+            <amtCharged>0</amtCharged>
+            <notification>Dear Customer, You have gifted 1024MB, please dial *460*261# to check your balance. Thankyou.</notification>
+        </productBuy>
+    </responseData>
+</fulfillmentService>
+
+

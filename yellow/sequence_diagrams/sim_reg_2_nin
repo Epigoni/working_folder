@@ -1,0 +1,25 @@
+actor Customer
+participant KIOSK
+participant SPP
+participant MADAPI
+participant CLM
+participant NIMC
+
+opt National or Foreigner with NIN
+Customer->KIOSK : Enters NIN detail
+KIOSK->SPP: Validate NIN details
+SPP->CLM: Perform NIN eligibility check
+CLM->SPP: Returns the eligibility check response
+SPP->MADAPI: Validate and fetch NIN Details \n(including Biodata and Image)
+MADAPI->NIMC: sends NIN validation call
+NIMC->MADAPI: Returns NIN details
+MADAPI->SPP: Returns NIN details
+SPP->SPP:   Perform NIN  \n underage Check
+SPP->KIOSK: Returns NIN Details
+KIOSK->KIOSK: Temporarily keep NIN \n Data in memory
+end
+opt Foreigner without NIN
+KIOSK->Customer: Prompt to enter passport details
+Customer->KIOSK: Fill in Passport Details
+end
+KIOSK->KIOSK: Transition to Biometric Capture\n screen

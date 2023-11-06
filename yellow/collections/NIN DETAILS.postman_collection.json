@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "98981e6a-be6b-4c64-8e51-7ef1051b26ab",
+		"name": "NIN DETAILS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22115971"
+	},
+	"item": [
+		{
+			"name": "Check NIN Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"channel\": \"Biosmart\",\r\n    \"type\":\"VNIN\",\r\n    \"data\": \"AA1111111111118B\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://preprod-nigeria.api.mtn.com/web/nin/v1/customers/verify?customerId=2349132058106",
+					"protocol": "https",
+					"host": [
+						"preprod-nigeria",
+						"api",
+						"mtn",
+						"com"
+					],
+					"path": [
+						"web",
+						"nin",
+						"v1",
+						"customers",
+						"verify"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "2349132058106"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

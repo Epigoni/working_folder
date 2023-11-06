@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "0a25bda1-29cd-45e3-a1fa-7a8f1585393f",
+		"name": "Sim-Verification-Preprod",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13899430"
+	},
+	"item": [
+		{
+			"name": "SimRecycle",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "S3d0AloCGq3WKAGAjJZeqpIGx1bUw6AV",
+						"type": "text"
+					},
+					{
+						"key": "partnerId",
+						"value": "agility",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://preprod-nigeria.api.mtn.com/v1/simVerification/7087117065/simRecycle/verifyStatus?senderId=1688445500001",
+					"protocol": "https",
+					"host": [
+						"preprod-nigeria",
+						"api",
+						"mtn",
+						"com"
+					],
+					"path": [
+						"v1",
+						"simVerification",
+						"7087117065",
+						"simRecycle",
+						"verifyStatus"
+					],
+					"query": [
+						{
+							"key": "senderId",
+							"value": "1688445500001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate Simswap",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "S3d0AloCGq3WKAGAjJZeqpIGx1bUw6AV",
+						"type": "text"
+					},
+					{
+						"key": "partnerId",
+						"value": "agility",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://preprod-nigeria.api.mtn.com/v1/simVerification/6999800015/simSwap/validateStatus?senderId=1688445500001&startDate=20220701&endDate=20220726",
+					"protocol": "https",
+					"host": [
+						"preprod-nigeria",
+						"api",
+						"mtn",
+						"com"
+					],
+					"path": [
+						"v1",
+						"simVerification",
+						"6999800015",
+						"simSwap",
+						"validateStatus"
+					],
+					"query": [
+						{
+							"key": "senderId",
+							"value": "1688445500001"
+						},
+						{
+							"key": "startDate",
+							"value": "20220701"
+						},
+						{
+							"key": "endDate",
+							"value": "20220726"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify-SimSwap",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "S3d0AloCGq3WKAGAjJZeqpIGx1bUw6AV",
+						"type": "text"
+					},
+					{
+						"key": "partnerId",
+						"value": "agility",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://preprod-nigeria.api.mtn.com/v1/simVerification/8058369844/simSwap/verifyStatus?senderId=1688445500001",
+					"protocol": "https",
+					"host": [
+						"preprod-nigeria",
+						"api",
+						"mtn",
+						"com"
+					],
+					"path": [
+						"v1",
+						"simVerification",
+						"8058369844",
+						"simSwap",
+						"verifyStatus"
+					],
+					"query": [
+						{
+							"key": "senderId",
+							"value": "1688445500001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SimActivation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "S3d0AloCGq3WKAGAjJZeqpIGx1bUw6AV",
+						"type": "text"
+					},
+					{
+						"key": "partnerId",
+						"value": "Agility",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://preprod-nigeria.api.mtn.com/v1/simVerification/2349132058016/simActivation/verifyStatus?senderId=1688445500001",
+					"protocol": "https",
+					"host": [
+						"preprod-nigeria",
+						"api",
+						"mtn",
+						"com"
+					],
+					"path": [
+						"v1",
+						"simVerification",
+						"2349132058016",
+						"simActivation",
+						"verifyStatus"
+					],
+					"query": [
+						{
+							"key": "senderId",
+							"value": "1688445500001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "simActivation-validation",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"key": "x-api-key",
+						"value": "pfBTf2IAuvNhrgSCXV4XPFfJ7lZKxEoe"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "S3d0AloCGq3WKAGAjJZeqpIGx1bUw6AV",
+						"type": "text"
+					},
+					{
+						"key": "partnerId",
+						"value": "Agility",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://preprod-nigeria.api.mtn.com/v1/simVerification/8132058016/simActivation/validateStatus?senderId=1688445501&startDate=20200406&endDate=20220506",
+					"protocol": "https",
+					"host": [
+						"preprod-nigeria",
+						"api",
+						"mtn",
+						"com"
+					],
+					"path": [
+						"v1",
+						"simVerification",
+						"8132058016",
+						"simActivation",
+						"validateStatus"
+					],
+					"query": [
+						{
+							"key": "senderId",
+							"value": "1688445501"
+						},
+						{
+							"key": "startDate",
+							"value": "20200406"
+						},
+						{
+							"key": "endDate",
+							"value": "20220506"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,125 @@
+items[0].evaluationResult === "OK - (0)"
+items[0].evaluations[1].resultMessage === "OK"
+items[0].evaluations[1].qualityAssessmentResult.passed === true
+items[0].evaluations[1].qualityAssessmentResult.score === 0.99 - 0.00 >= 0.5 >= 1
+
+
+
+
+
+{
+    "metadata": {
+        "limit": 1,
+        "page": 1,
+        "totalCount": 1
+    },
+    "paging": {
+        "first": null,
+        "previous": null,
+        "next": null,
+        "last": null
+    },
+    "href": "https://emea.identityx-cloud.com/mtn-nigeria/IdentityXServices/rest/v1/users/QTAz0pHtWAdGF5s23OE1eIpYSA/face/samples",
+    "items": [
+        {
+            "href": "https://emea.identityx-cloud.com/mtn-nigeria/IdentityXServices/rest/v1/users/QTAz0pHtWAdGF5s23OE1eIpYSA/samples/zMGOC-hXyfo17MNff6fxHA",
+            "id": "zMGOC-hXyfo17MNff6fxHA",
+            "type": "Face",
+            "usable": true,
+            "lastEvaluated": "2023-03-30T15:20:18.329+0000",
+            "evaluationResult": "OK - (0)",
+            "evaluations": [
+                {
+                    "evaluationDate": "2023-03-30T15:20:18.106+0000",
+                    "resultCode": 0,
+                    "resultMessage": "OK",
+                    "qualityAssessmentResult": {
+                        "passed": true,
+                        "metaData": {
+                            "EyesOpenConfidence": "1.0",
+                            "UniformLightingConfidence": "0.95",
+                            "FrontalPosePass": "true",
+                            "FaceFoundPass": "true",
+                            "PoseAngleRoll": "-2",
+                            "FaceCntrPositionY": "437",
+                            "FaceCntrPositionX": "344",
+                            "SharpnessPass": "true",
+                            "FaceBoxUpperLeftCornerY": "298",
+                            "FaceBoxUpperLeftCornerX": "205",
+                            "OnlyOneFaceConfidence": "1.0",
+                            "ProcessingTimePerFrame": "30.0",
+                            "InterEyesDistancePass": "true",
+                            "ExposurePass": "true",
+                            "FaceBoxLowerRightCornerX": "482",
+                            "RightEyePositionX": "407",
+                            "FaceBoxLowerRightCornerY": "575",
+                            "RightEyePositionY": "393",
+                            "GrayscaleDensityPass": "true",
+                            "LeftEyePositionY": "397",
+                            "policyName": "DaonFace v3.0 Template Generation",
+                            "PoseAngleRollPass": "true",
+                            "LeftEyePositionX": "290",
+                            "FrontalPoseConfidence": "0.75",
+                            "EyesOpenPass": "true",
+                            "Exposure": "56",
+                            "EyesFoundConfidence": "0.767221",
+                            "UniformLightingPass": "true",
+                            "Sharpness": "79",
+                            "GrayscaleDensity": "228",
+                            "InterEyesDistance": "117",
+                            "GlobalFaceQualityScore": "0.908434",
+                            "GlobalFaceQualityPass": "true",
+                            "ProcessingTimePerFramePass": "true",
+                            "OnlyOneFacePass": "true",
+                            "FaceFoundConfidence": "1.0",
+                            "EyesFoundPass": "true"
+                        },
+                        "vendor": "daonfacev3"
+                    }
+                },
+                {
+                    "evaluationDate": "2023-03-30T15:20:18.329+0000",
+                    "resultCode": 0,
+                    "resultMessage": "OK",
+                    "qualityAssessmentResult": {
+                        "passed": true,
+                        "score": 0.9986712,
+                        "metaData": {
+                            "IdFaceThreshold": "0.5",
+                            "IdFaceModel": "aphrodite"
+                        },
+                        "vendor": "IdFace"
+                    }
+                }
+            ],
+            "fraudulent": false,
+            "format": "JPG",
+            "created": "2023-03-30T15:20:18.333+0000",
+            "tenant": {
+                "href": "https://emea.identityx-cloud.com/IdentityXServices/rest/v1/tenants/rbz1GCBfyrYK4xkzjhKSTQ"
+            },
+            "user": {
+                "href": "https://emea.identityx-cloud.com/mtn-nigeria/IdentityXServices/rest/v1/users/QTAz0pHtWAdGF5s23OE1eIpYSA"
+            },
+            "enrollments": {
+                "metadata": {
+                    "limit": 1,
+                    "page": 1,
+                    "totalCount": 1
+                },
+                "paging": {
+                    "first": null,
+                    "previous": null,
+                    "next": null,
+                    "last": null
+                },
+                "href": "https://emea.identityx-cloud.com/mtn-nigeria/IdentityXServices/rest/v1/users/QTAz0pHtWAdGF5s23OE1eIpYSA/samples/zMGOC-hXyfo17MNff6fxHA/enrollments",
+                "items": [
+                    {
+                        "href": "https://emea.identityx-cloud.com/mtn-nigeria/IdentityXServices/rest/v1/enrollments/LKQmbo5q1O1ul5p--orv0g"
+                    }
+                ]
+            }
+        }
+    ]
+}

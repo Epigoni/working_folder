@@ -1,0 +1,33 @@
+actor Customer
+participant KIOSK
+
+opt SIM Registration
+KIOSK->Customer: Prompt customer to  enter address details
+
+Customer->KIOSK: Enters address details  (Street, LGA, State)
+
+KIOSK->Customer:    Prompt customer to  enter location of origin
+
+Customer->KIOSK: Enters location details  (State, LGA)
+end
+opt SIM SWAP
+space -3
+Customer->KIOSK: Enter FQN
+Customer->KIOSK: Enter Last Recharge
+Customer->KIOSK: Enter Date of Activation
+end
+
+KIOSK->Customer: Prompt for fingerprint capture
+Customer->KIOSK: Places finger on device
+space -3
+KIOSK->KIOSK: Captures finger print
+space -3
+KIOSK->Customer: Prompt to give digital consent
+
+Customer->KIOSK: Confirms digital consent
+KIOSK->KIOSK:   Display customer  data  before  final confirmation
+space -3
+Customer->KIOSK: Confirms data for final \n processing
+KIOSK->KIOSK: Saves Data for payment
+space -3
+KIOSK->Customer: Displays Payment prompt \n.        for confirmation

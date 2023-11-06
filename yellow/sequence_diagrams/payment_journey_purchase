@@ -1,0 +1,60 @@
+space -2space -2
+actor Customer
+participant "Proprietary Channel\n(MyMTN APP&WEB)" as APP
+participant NPG
+participant MADAPI
+participant Bank
+participant "Fullfillment Service \n(CIS/AirServer)" as FS
+participant DAAS
+
+
+
+Customer -> APP: Prompts app to purchase \nan MTN Product or service \n        (Airtime or Data)
+space -3
+APP->NPG: Generates Tracking ID and Trace ID  
+space -3
+NPG->NPG:      Creates payment order \n and generates payment link
+space -3
+NPG->APP: Returns payment link 
+space -3
+APP->Customer: Display payment widget using link
+space -3
+Customer->NPG: Makes Payment on NPG via displayed widget on MyMTNAPP
+space -3
+NPG->Bank: Calls the bank for debit instruction
+space -3
+Bank->NPG: Responds with success response
+space -3
+NPG->NPG: Updates Payment status
+space -3
+NPG->APP: Responds with payment status
+space -3
+APP->Customer:       Closes payment widget \n and Displays success message 
+space -3
+APP->FS: Send fullfillment request to Calls
+FS->FS: Processing order fulfillment
+FS->APP: Retu
+space -2
+loop
+space -4
+APP-->>MADAPI: Calls fullfillment service for order fullfillment\n configured x times till fullfillment is verified
+space -4
+MADAPI-->>FS: Calls fullfillment service for order fullfillment\n configured x times till fullfillment is verified
+space -3
+FS-->MADAPI: Responds with either success or pending response
+space -3
+MADAPI-->APP: Responds with either success or pending response
+space -2.5
+end
+space -2
+alt  Fullfilled within configured retry logic
+APP->APP: Update payment status                     
+else Unfullfilled outside configured retry logic
+APP->APP: Stops fullfillment query 
+APP->NPG: Triggers reversal
+NPG->APP: Responds with successful reversal
+end
+space -3
+NPG->DAAS: Pushes payment data to DAAS
+space -3
+FS->DAAS: Pushes fullfillment data to DAAS

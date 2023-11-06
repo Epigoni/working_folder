@@ -1,0 +1,47 @@
+title NIN Verification Bypass
+actor Customer
+actor Admin
+actor Agent
+participant Biosmart
+participant CLM
+participant EDA
+
+Customer->Agent:Request for Sim Registration 
+
+
+Admin->Biosmart : Login as Administrator
+Admin->Biosmart: Update Settings to allow NIN Verification Bypass
+Admin->Biosmart : Activate NIN Bypass feature
+Biosmart-->Biosmart: Persist \nNIN Bypass \nconfiguration
+
+
+
+Agent->Biosmart:Launch Biosmart
+Agent->Biosmart:Login with Credentials
+Agent->Biosmart:Select SIM registration Menu
+
+Biosmart-->Biosmart: Add NIN Bypass as \n a Verification Type
+Biosmart-->Biosmart: Display only Nigeria \n as Country option
+Biosmart-->Agent: Display SIM Registration Form \nwith Enrollment Type options
+
+opt Register with NIN
+
+Customer->Agent: Provides NIN details 
+
+Agent->Biosmart: Verify NIN of Customer
+Biosmart-->Agent: Returns Customer Details 
+Biosmart-->Agent: Enter State, LGA 
+Agent->Biosmart: Submit
+end
+
+opt Register with NIN Bypass
+
+Agent->Biosmart: Select NIN Verification Bypass
+
+Biosmart-->Biosmart: Returns customer Details 
+Agent->Biosmart: Submit
+end
+
+Biosmart->CLM: Submit Customer information
+CLM-->CLM: Calculate Barring or Expiry Date
+

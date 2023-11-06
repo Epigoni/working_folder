@@ -1,0 +1,111 @@
+SELECT 
+a.responsemessage payment_responsemessage,
+a.amount payment_amount,
+a.currency payment_currency,
+a.msc payment_msc,
+a.payable payment_payable,a.income payment_income,
+a.channel payment_channel,
+a.merchantid payment_merchantid,
+a.terminalid payment_terminalid,
+a.transactionid payment_transactionid,
+a.traceid payment_traceid,
+a.channeltranid payment_channeltranid,
+a.customerid payment_customerid,
+a.customerphone payment_customerphone,
+a.customeremail payment_customeremail,
+a.customername payment_customername,
+a.productid payment_productid,
+a.description payment_description,
+a.title payment_title,
+a.processed_timestamp payment_processed_timestamp,
+a.cardorigin payment_cardorigin,
+a.vat payment_vat,
+a.responsecode payment_responsecode,
+a.createdate payment_createdate,
+a.paymentdate payment_date,a.tbl_dt payment_tbl_dt,
+
+b.flag data_fullfilment_status,
+b.amount data_fullfilment_amount,
+b.productid data_fullfilment_details,
+b.date_key data_fullfilment_datekey,
+c.voucher_details data_fullfillment_details,
+
+c.cdr_type_main air_fullfillment_status,
+c.transactionamount air_fullfillment_amount,
+c.voucher_details air_fullfillment_details,
+c.date_key air_fullfillment_date_key,
+c.timestamp_v air_fullfillment_timestamp_v,
+
+
+c.opco_id air_fullfillment_opco_id,
+c.origintransactionid air_fullfillment_origintransactionid,
+c.originoperatorid air_fullfillment_originoperatorid,
+c.origintimestamp air_fullfillment_origintimestamp,
+c.currentserviceclass air_fullfillment_currentserviceclass,
+c.transactiontype air_fullfillment_transactiontype,
+c.transactionamount air_fullfillment_transactionamount,c.transactioncurrency air_fullfillment_transactioncurrency,c.voucher_details air_fullfillment_voucher_details,
+c.accountnumber air_fullfillment_accountnumber,c.accountcurrency air_fullfillment_accountcurrency,c.subscribernumber air_fullfillment_subscribernumber, 
+c.accountinformationbeforerefill air_fullfillment_accountinformationbeforerefill,c.welcomestatus air_fullfillment_welcomestatus,c.locationnumber air_fullfillment_locationnumber,
+c.accountcurrencycleared air_fullfillment_accountcurrencycleared,c.requestedrefilltype air_fullfillment_requestedrefilltype,c.cellidentifier air_fullfillment_cellidentifier, 
+c.servicefee_details air_fullfillment_servicefee_details,c.date_key air_fullfillment_date_key,c.msisdn_key air_fullfillment_msisdn_key,c.event_timestamp_enrich air_fullfillment_event_timestamp_enrich, 
+c.original_timestamp_enrich air_fullfillment_original_timestamp_enrich,c.recharge_type_enrich air_fullfillment_recharge_type_enrich,c.cgi_enrich air_fullfillment_cgi_enrich, 
+c.longitude_enrich air_fullfillment_longitude_enrich,c.latitude_enrich air_fullfillment_latitude_enrich,c.is_late_arrival_enrich air_fullfillment_is_late_arrival_enrich, 
+c.refill_profile_id_enrich air_fullfillment_refill_profile_id_enrich,c.refill_type_enrich air_fullfillment_refill_type_enrich,c.segmentation_id_enrich air_fullfillment_segmentation_id_enrich, 
+c.external_data_1_enrich air_fullfillment_external_data_1_enrich,c.processed_timestamp air_fullfillment_processed_timestamp,c.ltz_event_timestamp_enrich air_fullfillment_ltz_event_timestamp_enrich, 
+c.origin_host_nm air_fullfillment_origin_host_nm,c.voucher_serial_nr air_fullfillment_voucher_serial_nr,c.ma_amount_used air_fullfillment_ma_amount_used,c.site_id_enrich air_fullfillment_site_id_enrich, 
+c.site_name_enrich air_fullfillment_site_name_enrich,c.cell_name_enrich air_fullfillment_cell_name_enrich,c.sales_region_enrich air_fullfillment_sales_region_enrich,  
+c.sub_country_enrich air_fullfillment_sub_country_enrich,c.call_date_ts_enrich air_fullfillment_call_date_ts_enrich,c.da_accountbalance_enrich air_fullfillment_da_accountbalance_enrich,
+c.da_accountexpirydateafter_enrich air_fullfillment_da_accountexpirydateafter_enrich,c.dedicatedaccountid_enrich air_fullfillment_dedicatedaccountid_enrich,c.ma_amount_before air_fullfillment_ma_amount_before, 
+c.ma_amount_after air_fullfillment_ma_amount_after,c.recharge_type_enrich_desc air_fullfillment_recharge_type_enrich_desc,c.is_voucher_enrich_desc air_fullfillment_is_voucher_enrich_desc, 
+c.accountbalance_desc air_fullfillment_accountbalance_desc,c.tbl_dt air_fullfillment_tbl_dt
+FROM flare_8.payment_gateway_transactions a 
+left outer JOIN dataops_prod.npg_recon_rpt b ON b.traceid = a.traceid
+left outer JOIN flare_8.cs6_air_cdr c ON a.traceid = c.origintransactionid where c.cdr_type_main = 'RR'  
+and a.tbl_dt = 20230701 limit 5;
+
+
+SELECT 
+a.responsemessage payment_responsemessage,
+a.amount payment_amount,
+a.currency payment_currency,
+a.msc payment_msc,
+a.payable payment_payable,a.income payment_income,
+a.channel payment_channel,
+a.merchantid payment_merchantid,
+a.terminalid payment_terminalid,
+a.transactionid payment_transactionid,
+a.traceid payment_traceid,
+a.channeltranid payment_channeltranid,
+a.customerid payment_customerid,
+a.customerphone payment_customerphone,
+a.customeremail payment_customeremail,
+a.customername payment_customername,
+a.productid payment_productid,
+a.description payment_description,
+a.title payment_title,
+a.processed_timestamp payment_processed_timestamp,
+a.cardorigin payment_cardorigin,
+a.vat payment_vat,
+a.responsecode payment_responsecode,
+a.createdate payment_createdate,
+a.paymentdate payment_date,
+a.tbl_dt payment_tbl_dt,
+
+b.flag data_fullfilment_status,
+b.amount data_fullfilment_amount,
+b.productid data_fullfilment_details,
+b.date_key data_fullfilment_date_key,
+b.processed_timestamp payment_timestamp,
+
+
+c.cdr_type_main air_fullfillment_status,
+c.transactionamount air_fullfillment_amount,
+c.voucher_details air_fullfillment_details,
+c.date_key air_fullfillment_date_key,
+c.timestamp_v air_fullfillment_timestamp
+
+FROM flare_8.payment_gateway_transactions a 
+left outer JOIN dataops_prod.npg_recon_rpt b ON b.traceid = a.traceid
+left outer JOIN flare_8.cs6_air_cdr c ON a.traceid = c.origintransactionid where c.cdr_type_main = 'RR'  
+and a.tbl_dt = 20230701 limit 5;
+

@@ -1,0 +1,2 @@
+curl --location 'https://prod-nigeria.api.mtn.com/v2/customers/2348065701493/subscriptions/history?startDate=20230201&endDate=20230402&subscriptionProviderId=daas&pageNo=1&pageLimit=10' \
+--header 'X-API-Key: VrJjgwoY2VrANPvLs9hCYFncHYaJ1rV7'

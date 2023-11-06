@@ -1,0 +1,81 @@
+<soapenv:Header>
+    <cai3:SessionId>5e6b1a2918024f3e871473e0f0c97575</cai3:SessionId>
+    <cai3:TransactionId>1000915299</cai3:TransactionId>
+</soapenv:Header>
+<soapenv:Body>
+    <cai3:Set>
+        <cai3:MOType>MTNGSMSUB2@http://schemas.ericsson.com/ma/CA/GSMSUB2/</cai3:MOType>
+        <cai3:MOId>
+            <gsm:serviceName>ActClawBackSync</gsm:serviceName>
+            <gsm:msisdn>2349132058693</gsm:msisdn>
+            <gsm:transactionID>1679480997063</gsm:transactionID>
+        </cai3:MOId>
+        <cai3:MOAttributes>
+            <gsm:SetMTNGSMSUB serviceName= \"ActClawBackSync\">
+                <gsm:clawBack>
+                    <gsm:serviceName>ActClawBackSync</gsm:serviceName>
+                    <gsm:msisdn>2349132058693</gsm:msisdn>
+                    <gsm:agilityAmount>3300.00</gsm:agilityAmount>
+                    <gsm:pricePlan>CNT</gsm:pricePlan>
+                    <gsm:loginAccount>agilityUser</gsm:loginAccount>
+                    <gsm:transactionID>1679480997063</gsm:transactionID>
+                    <gsm:deducAmount>3000</gsm:deducAmount>
+                    <gsm:upDateUnBilled>YES</gsm:upDateUnBilled>
+                </gsm:clawBack>
+            </gsm:SetMTNGSMSUB>
+        </cai3:MOAttributes>
+    </cai3:Set>
+</soapenv:Body>undefined
+</soapenv:Envelope>
+Response
+
+
+<S:Envelope
+    xmlns:S= \"http://schemas.xmlsoap.org/soap/envelope/\"
+    xmlns:cai3g= \"http://schemas.ericsson.com/cai3g1.2/\">
+
+    <S:Header>
+
+        <cai3g:SessionId>5e6b1a2918024f3e871473e0f0c97575</cai3g:SessionId>
+
+        <cai3g:TransactionId>1000915299</cai3g:TransactionId>
+
+    </S:Header>
+
+    <S:Body>
+
+        <ns2:Fault
+            xmlns:ns2= \"http://schemas.xmlsoap.org/soap/envelope/\"
+            xmlns:ns3= \"http://www.w3.org/2003/05/soap-envelope\">
+
+            <faultcode>ns2:Server</faultcode>
+
+            <faultstring>This is a server fault</faultstring>
+
+            <detail>
+
+                <Cai3gFault:Cai3gFault
+                    xmlns= \"http://schemas.ericsson.com/cai3g1.2/\"
+                    xmlns:Cai3gFault= \"http://schemas.ericsson.com/cai3g1.2/\">\n <faultcode>4006</faultcode>\n <faultreason>\n <reasonText>External
+                    error.</reasonText>\n </faultreason>\n <faultrole>MF</faultrole>\n <details>\n <PGFault:PGFault
+                            xmlns= \"http://schemas.ericsson.com/pg/1.0\"
+                            xmlns:PGFault= \"http://schemas.ericsson.com/pg/1.0\">\n <errorcode>50010</errorcode>\n <errormessage>OPERATION
+                    FAILED, ROLLBACK HAS BEEN PERFORMED SUCCESSFULLY</errormessage>\n <failinformation
+                                action= \"execution\" taskname= \"clawback_MVNE3_Failure1\">\n <errorcode>1005</errorcode>\n <errormessage>Clawback
+                    Request Failed and Rollback Partially Failed</errormessage>\n <errordetails>Failure
+                    during processing of the request. Clawback Request Failed and Rollback Partially
+                    Failed - [Processed by PG Node: ojedatest02]</errordetails>\n </failinformation>
+                    \n
+
+                                                                        </PGFault:PGFault>
+                    \n
+
+                                                            </details>\n </Cai3gFault:Cai3gFault>
+
+            </detail>
+
+        </ns2:Fault>
+
+    </S:Body>
+
+</S:Envelope>
